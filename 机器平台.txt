@@ -1,0 +1,204 @@
+oak.sap.corp.
+1：sol  ---sunsparc64
+	Solaris只分sol-64和solamd
+	sol      Solaris-64   sunsparc64  sun_svr4  Solaris 机器
+	sunsparc64_ce     sdc版    
+	sunsparc64_smp    smp版
+	solstrs3  intall machine
+	
+	driver machine willow 
+	solstrs4,iron,solstrs2,clay,willow,solstrs3,solstrs1,
+	callisto,seashore
+	
+开端口
+	cd /tmp;rm -rf 55555;mkdir 55555;cd 55555;setenv QUASR_AGENT /remote/quasr4/quasr/release/agents_current/solaris;setenv QUASR_TESTS /calm/svr/qtst;setenv   
+
+QUASR_AGENT_PORT 55555;setenv PATH $QUASR_AGENT/bin:$PATH;$QUASR_AGENT/bin/run_agent &;	
+	
+*************************************************************************************************************************
+2： solamd ---sunx64
+	solamd          Solaris Opteron  Sun Solaris x64 sunx64 sun*86  机器
+	sunx64_ce       sdc版
+	sunx64_smp      smp版
+	andre  power machine
+	sdcsolxqa,sdcsolxqb,andre，sdcsolx1,sdcsolx2,sdcsolx3,sdcsolx4,
+	solamdpw01.pal.sap.corp
+solamdpw02.pal.sap.corp
+solamdpw03.pal.sap.corp
+solamdpw04.pal.sap.corp
+solamdpw05.pal.sap.corp
+solamdpw06.pal.sap.corp
+solamdpw07.pal.sap.corp
+solamdpw08.pal.sap.corp
+	开端口
+	cd /tmp;rm -rf 55555;mkdir 55555;cd 55555;setenv QUASR_AGENT /remote/quasr4/quasr/release/agents_current/solaris_opteron;setenv QUASR_TESTS /calm/svr/qtst;setenv   
+
+QUASR_AGENT_PORT 55555;setenv PATH $QUASR_AGENT/bin:$PATH;$QUASR_AGENT/bin/run_agent &;	
+*********************************************************************************************************************
+3：Linux机器————lam平台
+	linuxamd  lam   Linux x64 机器
+	linuxamd64_ce   sdc版
+	linuxamd64_smp  smp版
+
+	linuxamd机器
+	可做driver ： hpcblade7  gridqasu1 dunn大容量  
+	lnxpw05.oak.sap.corp
+	hpcblade6,gridqarh4,lnxpw05,
+	lnxpw06-10,lnxpw07,gridqarh1,hwtest2,hpcblade6,gridqarh4,hwtest3,hpcblade5,gomes4,gomes1,hpcblade7,	
+	
+	可做agent: hwtest2  linstrs2  linstrs3
+	
+	开端口
+	cd /tmp;rm -rf 55222;mkdir 55222;cd 55222;setenv QUASR_AGENT /remote/quasr4/quasr/release/agents_current/linux;setenv QUASR_TESTS /calm/svr/qtst;setenv   
+
+QUASR_AGENT_PORT 55222;setenv PATH $QUASR_AGENT/bin:$PATH;$QUASR_AGENT/bin/run_agent &;
+	
+	cd /tmp;rm -rf 21967;mkdir 21967;cd 21967;setenv QUASR_AGENT /remote/quasr4/quasr/release/agents_current/linux;setenv QUASR_TESTS /calm/svr/qtst;setenv   
+
+QUASR_AGENT_PORT 21967;setenv PATH $QUASR_AGENT/bin:$PATH;$QUASR_AGENT/bin/run_agent &;
+************************************************************************************************8
+4：lps机器
+	lps(Linux pseries/linux_ibm_pseries/ibmlinux_smp/Linux pseries)  机器  Linux on POWER
+	ibmplinux_ce    sdc版    ibmplinux_smp   smp版
+	rhlopstr,suse11ppcbou,p6rh51cert1,
+	install 1254:rhlopstr   p6rh51cert1  elevon  rhlopqa1   wingeron
+	(kerb5)   (suse11ppcbou  29777)
+
+	rh5p6cert nicasio 
+	p6rh51cert1  wingeron  rhlopqa1  
+
+		usphllxtip01.phl.sap.corp
+    lpspw01
+	lpsbarr01  
+	lpsbarr02  
+	lpsbarr03  
+	lpsbarr04   
+	
+	&&&&p            p7susepw01——usphllxtip01   rhlopstr,  suse11ppcbou  elevon      &&&&   wingeron 	airbus 
+
+
+
+	lps32(ibmplinux32)机器
+	shahak  
+	
+开端口
+	cd /tmp;rm -rf 55555;mkdir 55555;cd 55555;setenv QUASR_AGENT /remote/quasr4/quasr/release/agents_current/ibmplinux;setenv QUASR_TESTS /calm/svr/qtst;setenv   
+
+QUASR_AGENT_PORT 55555;setenv PATH $QUASR_AGENT/bin:$PATH;$QUASR_AGENT/bin/run_agent &;
+	
+*********************************************************************************************
+
+5：hpia64(hpia/Hpi)机器	
+	hpiadg4,hpiadg2,hpia301,hpvm1qa,hpvm2qa,hpvm3qa,hpvm3qb,hpvm2sdd,hpvm3sdd,hpvm4sdd, 21967
+	hpiadg3,
+	install 1503: hpiadg3, hpvm3qb    sdcsolxqb 
+	quasr: hpvm2qa hpvm3qa hpvm2sdd hpiadg3 hpvm3sdd hpvm1qa  hpia301 
+	hpvm2qa, hpvm[1-4][qa | qb | sdc | sdd] ---- have cluster
+	hpiadg2   hpiadg1  hpiadg3 hpiadg4----no cluster
+	hpia301 hpia201 hpia202               ----belong DEV                                                                                  
+
+	hpvm1sdd
+	
+	hpia32机器
+	shofar
+	
+	hpvh1,hpvh2,hpvh3,hpvh4
+	
+	hpvh1.sjc.sap.corp
+	hpvh2.sjc.sap.corp
+	hpvh3.sjc.sap.corp
+	hpvh4.sjc.sap.corp
+	
+	
+	hpiadg2,hpiadg1,hpiadg3,hpiadg4,hpiadg2
+	
+	hpiadg1.oak.sap.corp
+	hpiadg2.oak.sap.corp
+	hpiadg3.oak.sap.corp
+	hpiadg4.oak.sap.corp 
+	
+	
+	
+开端口
+	cd /tmp;rm -rf 55555;mkdir 55555;cd 55555;
+	setenv QUASR_AGENT /remote/quasr4/quasr/release/agents_current/hpia64;
+	setenv QUASR_TESTS /calm/svr/qtst;setenv QUASR_AGENT_PORT 33333;setenv PATH $QUASR_AGENT/bin:$PATH;$QUASR_AGENT/bin/run_agent &;
+	
+	
+时间间隔小于30秒
+agent   ==========  driver
+lnxpw06 ========== hpvm1qa
+solstrs4 ==========	hpiadg4
+lnxpw08 ==========	hpiadg4
+*****************************************************************************************************
+6：i51机器
+	i51为ibmaix
+	p6vm3qa  intall machine   bash     p6vm1qa
+	aseqap7vm baloo  ->>>power machine
+	baloo,p6vm4qb,p6vm2qa,p6vm3sdc,p6vm4sdc,p6vm3qa,usphlxatip01,usphlxatip02,  21967
+	p6vm1qb,aseqap7vm（22220）,              
+
+	p7aixpw01.phl.sap.corp,
+	p7aixpw02.phl.sap.corp,
+	p7aixtia01.phl.sap.corp
+	时间间隔小于30秒	lnxpw06=====baloo
+
+
+开端口
+	cd /tmp;rm -rf 55555;mkdir 55555;cd 55555;setenv QUASR_AGENT /remote/quasr4/quasr/release/agents_current/ibmaix;setenv QUASR_TESTS /calm/svr/qtst;setenv   
+
+QUASR_AGENT_PORT 55555;setenv PATH $QUASR_AGENT/bin:$PATH;$QUASR_AGENT/bin/run_agent &;	
+*****************************************************************************************************
+	
+7：NT机器	
+	NT机器用户名：bart
+	NT机器密码：Sybase123
+	winpw01,winpw02,winpw03,winpw04,chariot,rozzie,quicksilver,qawin64vm1
+	rozzie   10.172.105.182
+	chariot   10.172.106.62
+	quicksilver
+	winpw01.oak.sap.corp winpw02.oak.sap.corp  winpw03.oak.sap.corp winpw04.oak.sap.corp
+	qawin64vm1
+	win64str                         install machine              
+	imqawin64vm1    10.172.145.107  比较慢
+	imqawin64vm2    10.172.145.109
+	imqawin64vm3    10.172.145.110  安装时缺失文件
+	imqawin64vm4   setenv DISPLAY 10.172.145.112:0.0      比较快  
+	aseqawin32vm1
+	
+	起端口
+	c:\q_agent>startagent.bat 55432
+	
+	winpw05  起端口
+	set ASE_OPER_ENV=QA_STRESS
+	
+	
+	cd /tmp;rm -rf 21968;mkdir 21968;cd 21968;
+	
+	setenv QUASR_AGENT /remote/quasr4/quasr/release/agents_current/linux64;
+    setenv QUASR_TESTS /calm/svr/qtst;
+	setenv QUASR_AGENT_PORT 21968;
+	setenv PATH $QUASR_AGENT/bin:$PATH;
+	$QUASR_AGENT/bin/run_agent &; 
+	
+	
+	
+	hadr private env
+	
+QUASR_TCF_KILLTIME=3000
+NUMRERUNS=3
+CHANGE_PWD=YES
+GRIDTOOLS=/remote/asepw_archive2/grid/MYLOCALGRID
+POLICY_SEARCH_PATH=/usr/u/hej/grid/ase160sp02plx
+CPU_GRACE_TIME=1500
+REMOVE_HADR_RLS_FLAG=yes
+MAX_LATENCY_SEC=1000
+NUM_WORKDIR_TO_KEEP=100
+TESTSETDIR=/remote/asepw_archive1/hadr/HADR_testset
+QUASR_TCF_INIT='source /remote/asepw_archive1/hadr/hook_exec.tcl'
+QUASR_TCF_INIT_FAILOVER='source /remote/asepw_archive1/hadr/hook_qsr_failover.tcl'
+
+
+
+dump tran tempdb with no_log
+alter database tempdb on default=500
